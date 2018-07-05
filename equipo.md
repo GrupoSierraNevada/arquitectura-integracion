@@ -8,5 +8,4 @@
     - Python
     - golang
     - protocol buffers
-  - Rol del Equipo: Líder del proyecto de integración
-
+  - Rol del Equipo: Líder técinco del proyecto de integración - Abierto a discusión
