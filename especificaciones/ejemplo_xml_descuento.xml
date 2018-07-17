@@ -1,0 +1,45 @@
+<t9820_pdv_d_doctos 
+	
+	f9820_guid="20BF3D25-D085-E811-811F-8A603B078B56"
+	f_id_tpv="Caja 01"
+	f9820_id_fecha_docto="2018-07-12T00:00:00" 
+	f9820_id_co="01 " 
+	f9820_id_tipo_docto="POD" 
+	f9820_rowid_tercero_cajero="5159" 
+	f9820_rowid_tercero_vendedor="5159" 
+	f9820_rowid_tipo_entrega="2" 
+	f9823_id_indicativo_domic="57" 
+	f9823_id_telefono_domic="777" 
+	f9823_nombre_contacto_domic="DIEGO F OTERO" 
+	f9823_id_pais_domic="169" 
+	f9823_id_depto_domic="76" 
+	f9823_id_ciudad_domic="001" 
+	f9823_id_barrio_domic="CENTRO" 
+	f9823_direccion_domic="CRA 66 $ 78 - 40" 
+	>
+  <t9830_pdv_d_movto_venta 	   
+	  f9830_rowid_item_ext="58529" 
+	  f9830_id_concepto="1201" 
+	  f9830_id_unidad_medida="UNI " 
+	  f9830_cant_base="1.0000" 
+	  f9830_precio_uni="15000.0000" 
+	  f9830_vlr_bruto="12605.0000" 
+	  f9830_vlr_neto="13500.0000"  
+	  f9834_rowid_familia="158" 
+	  f9834_tipo_familia_item="0"  
+	  f9834_tipo_reg_preparacion="0" 
+	 >
+    <t9831_pdv_d_movto_venta_dscto 
+             f9831_vlr_tot="1261.0000"
+	/>
+    <t9832_pdv_d_movto_venta_impto				   
+		f9832_id_llave_impuesto="IS19" 
+		f9832_porcentaje_base="100.0000" 
+		f9832_tasa="19.0000" 
+		f9832_vlr_uni="0.0000" 
+		f9832_vlr_tot="2156.0000" 
+		f9832_ind_accion="1"
+		f9832_ind_calculo="1"
+	/>
+  </t9830_pdv_d_movto_venta>
+</t9820_pdv_d_doctos>
