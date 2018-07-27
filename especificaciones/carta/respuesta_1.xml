@@ -1,0 +1,304 @@
+<Menu>
+    <FechaVigenciaPrecios>2018-07-27</FechaVigenciaPrecios>
+    <GrupoDeFamilias id="Call-Center">
+        <!-- 
+            RUTA SIESA ERP: 
+            POS Central->Configuracion TPV->Grupos De Familia["Call-Center"]
+            COMENTARIO :
+            a continuacion todas las familias que estan en el grupo de famlias indicado en el orden que aparecen en el grupo de familia
+        -->
+        <Familia id="Mucha Hambre D">
+            <!-- 
+                RUTA SIESA ERP: 
+                POS Central->Configuracion TPV->Familias de Items["Mucha  Hambre D"]
+                COMENTARIO:
+                a continuacion una entrada por cada item de los que se encuentran en la familia de items actual
+            -->
+
+            <Item id="0000461">
+                <!-- 
+                    POS Central->Configuracion TPV->Familias de Items["Mucha  Hambre D"]->Item[1]->id 
+                    primer elemento de los items 
+                -->
+                <Referencia>
+                    <!-- 
+                        RUTA SIESA ERP: 
+                        MaestrosComercial->Items->Item[0000461]->Referencia 
+                        COMTENARIO:
+                        la referencia del item actual
+                    -->
+                    50159
+                </Referencia>
+                <Descripcion>
+                    <!--  
+                        RUTA SIESA ERP:
+                        MaestrosComercial->Items->Item[0000461]->Descripcion
+                        COMENTARIO:
+                        la descripcion del item
+                    -->
+                    Super Sierra D
+                </Descripcion>
+                <Etiqueta>
+                    <!-- 
+                        RUTA SIESA ERP:
+                        POS Central->Configuracion TPV->Familias de Items["Mucha  Hambre D"]->Item[0]->Etiqueta
+                    -->
+                    Super Sierra
+                </Etiqueta>
+                <UnidadDeMedida>
+                    <!-- 
+                        RUTA SIESA ERP: 
+                        POS Central->Configuracion TPV->Familias de Items["Mucha  Hambre D"]->Item[0]->unidad de medida
+                        COMENTARIO:
+                        esta unidad de medida es la que se define en la famlia actual, no es la unidad principal del item necesariamente
+                    -->
+                    UND
+                </UnidadDeMedida>
+
+                <Precio>
+                    <!-- 
+                        RUTA SIESA ERP: 
+                        LP = lista de precios asociada al grupo de famlilias actual
+                        UM = unidad de medida de este item en esta familia
+                        I = ITEM actual
+                        FECHA = Fecha del precio indicada en la solicitud del web service
+                        Pos Central->Maestros Asociados -> Precios->Precios por Item->Lista de Precios[LP]->Item[I,UM, FECHA]->Precio
+
+                        COMETNARIO:
+                        si este item no teiene precio vigente este campo no debe mostrarse, o mostrar un valor no numerico como N/A
+                    -->
+                    15.900
+                </Precio>
+                <PrecioEnCombo>
+                    <!-- 
+                        RUTA SIESA ERP: 
+                        LP = lista de precios asociada al grupo de famlilias actual
+                        UM = unidad de medida de este item en esta familia
+                        I = ITEM actual
+                        FECHA = Fecha del precio indicada en la solicitud del web service
+                        Pos Central->Maestros Asociados -> Precios->Precios por Item->Lista de Precios[LP]->Item[I,UM, FECHA]->sugerido/combo
+
+                        COMETNARIO:
+                        si este item no teiene precio vigente este campo no debe mostrarse, o mostrar un valor no numerico como N/A
+                    -->
+                    N/A
+                </PrecioEnCombo>
+
+                <FamiliaAdiciones>
+                    <!-- 
+                        RUTA SIESA ERP: 
+                        POS Central->Configuracion TPV->Familias de Items["Mucha  Hambre D"]->Item[0]->Configuracion Avanzada[Generales]->Adiciones
+                        COMENTARIO:
+                        Este es el ID de la familia de adiciones asociada al item padre
+                    -->
+                    Adiciones D
+                </FamiliaAdiciones>
+                <FamiliaModificadores>
+                    <!--  
+                        RUTA SIESA ERP: 
+                        POS Central->Configuracion TPV->Familias de Items["Mucha  Hambre D"]->Item[0]->Configuracion Avanzada[Generales] -> Modificadores
+                        COMENTARIO:
+                        Este es el ID de la familia de adiciones asociada.
+                    -->
+                    Modif Hamburguesa
+                </FamiliaModificadores>
+                <TipoDeItem>
+                    <!-- 
+                        RUTA SIESA ERP: 
+                        POS Central->Configuracion TPV->Familias de Items["Mucha  Hambre D"]->Item[0]->Configuracion Avanzada[Generales] -> Tipo de Item
+                        
+                        tiene los siguientes valores:
+                        normal, preparacion, menu, y combo
+
+                        - normal:
+                        items como la gaseosa o una adición suelta, una galleta para perros, una malteada
+                        - preparacion:
+                        items que tienen alguna variable en la preparacion que no afecta el precio. en nuestro
+                        caso el pan de las hamburgesas es variable y no cambia el precio. 
+                        - menu:
+                        Esta es la figura que usamos para nuestros combos. a continaucion en <preparaciones> se indican
+                        las diferentes opciones disponibles para un combo. los items que componen el menu toman el "precio en combo"
+                        - combo:
+                        no usamos combo en ningun item actualmente
+                    -->
+                    Preparacion
+                </TipoDeItem>
+                <FamiliasPreparacion>
+                    <!-- 
+                        RUTA SIESA ERP:
+                        POS Central->Configuracion TPV->Familias de Items["Mucha  Hambre D"]->Item[0]->Configuracion Avanzada[Preparaciones] 
+                        COMENTARIO:
+                        estas son las familias asociadas alitem tipo de preparacion. en este ejemplo para la hamburguesa
+                        se utiliza para determinar el tipo de pan
+                    -->
+                    <Familia id="Opciones Pan Grande">
+                        <!-- 
+                            todas nuestras hamburguesas grandes se pueden pedir con pan arabe, cama de lechuga o pan normal. 
+                            sin cambiar el precio. por esta razon el pan se debe presentar como preparacion.
+                            Las opciones de pan estan determinadas por los items de la familia Opciones Pan Grande y aqui
+                            se determina cual es el item por defecto 
+                        -->
+                        <Etiqueta>
+                            <!-- 
+                                RUTA SIESA ERP: 
+                                POS Central->Configuracion TPV->Familias de Items["Opciones Pan Grande"]->Item[0]->Configuracion Avanzada[Preparaciones]->preparcion[0]->Item Preparacion Default
+                            -->
+                            Pan
+                        </Etiqueta>
+                        <Item id="00000062" default="true">
+                            <!-- 
+                                RUTA SIESA ERP: 
+                                POS Central->Configuracion TPV->Familias de Items["Opciones Pan Grande"]->Item[0]->Configuracion Avanzada[Preparaciones]->preparcion[0]->Item Preparacion Default
+
+                                lleva default cuando se trata de un tipo "preparacion"
+                            -->
+                        </Item>
+                        <Cantidad>
+                            <!-- 
+                                RUTA SIESA ERP: 
+                                POS Central->Configuracion TPV->Familias de Items["Opciones Pan Grande"]->Item[0]->Configuracion Avanzada[Preparaciones]->preparcion[0]->Cantidad Formula Kit
+                                COMENTARIO:
+                                Este valor generalmente es 1.0 puede variar pero es parametrizable asi que debe incluirse
+                            -->
+                            1.0
+                        </Cantidad>
+                    </Familia>
+                </FamiliasPreparacion>
+                
+                <!-- <VariablesReceta>
+                    pendiente resolver como vamos a configurar "sin cebollas", "sin salsa" y "sin vegetales" o "sin tomate"
+                    actualmente el POS siesa permite quitar ingredientes especificos de las recetas, pero 
+                    el api que nos proveen no parece permitirlo
+                    ademas sospecho que habria que comunicarle las recetas a domicilios.com para que consruyan la entrada a inventario
+                    con las cantidades devueltas :(
+                </VariablesReceta> -->
+
+            </Item>
+        </Familia>
+
+        <Familia id="En Combo D">
+            <!-- 
+                RUTA SIESA ERP: 
+                POS Central->Configuracion TPV->Familias de Items["En Combo D"]
+                COMENTARIO:
+                esta deberia ser la segunda familia en el grupo de familias. para efectos del eljemplo 
+                salto a un grupo de familia que maneja los combos
+            -->
+            <Item id="0000546">
+                <Referencia>50244</Referencia>
+                <Descripcion>Combo Papas Normales y Bebidad D</Descripcion>
+                <Etiqueta>Papas Norm Bebida</Etiqueta>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Precio>N/A</Precio>
+                <PrecioEnCombo>N/A</PrecioEnCombo>
+                <TipoDeItem>menu</TipoDeItem>
+                <FamiliasPreparacion>
+                    <Familia id="Bebidas Combo D">
+                        <Etiqueta>Bebida</Etiqueta>
+                        <Item id="0000521"/>
+                        <Item id="0000010"/>
+                        <Item id="0000513"/>
+                    </Familia>
+                    <Familia id="Acomp. En Combo D">
+                        <Etiqueta>Acompañamiento</Etiqueta>
+                        <Item id="0000453"/>
+                    </Familia>
+                </FamiliasPreparacion>
+            </Item>
+        </Familia>
+    </GrupoDeFamilias>
+
+    <FamiliasAuxiliares>
+        <!-- aqui se lista una sola vez las familias que se usaron en los tags <FamiliasPreparacion> de los items en las familias del grupo de familia arria -->
+        <Familia id="Opciones Pan Grande">
+            <Item id="0000062">
+                <Referencia>00057</Referencia>
+                <Etiqueta>Pan 85 g</Etiqueta>
+                <Descripcion>Pan hamburguesa</Descripcion>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Precio>N/A</Precio>
+                <PrecioEnCombo>N/A</PrecioEnCombo>
+            </Item>
+            <Item id="0000063">
+                <Referencia>00058</Referencia>
+                <Etiqueta>Pan Árabe</Etiqueta>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Precio>N/A</Precio>
+                <PrecioEnCombo>N/A</PrecioEnCombo>
+            </Item>
+            <Item id="0000120">
+                <Referencia>00115</Referencia>
+                <Etiqueta>Cama Lechuga</Etiqueta>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Precio>N/A</Precio>
+                <PrecioEnCombo>N/A</PrecioEnCombo>
+            </Item>
+        </Familia>
+
+        <Familia id="Acomp. En Combo D">
+            <Item id="0000453">
+                <Referencia>50151</Referencia>
+                <Descripcion>Papas Normales</Descripcion>
+                <Etiqueta>Papas Normales DT</Etiqueta>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Precio>3200</Precio>
+                <PrecioEnCombo>2500</PrecioEnCombo>
+            </Item>
+        </Familia>
+
+        <Familia id="Bebidas Combo D">
+            <Item id="0000521">
+                <Referencia>50219</Referencia>
+                <Descripcion>Limonada de panela D</Descripcion>
+                <Etiqueta>Limonada de Panela</Etiqueta>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Precio>3000</Precio>
+                <PrecioEnCombo>2000</PrecioEnCombo>
+            </Item>
+            <Item id="0000010">
+                <Referencia>00005</Referencia>
+                <UnidadDeMedida></UnidadDeMedida>
+                <Descripcion>Agua normal 600 ml</Descripcion>
+                <Etiqueta>Agua Normal 600 mL</Etiqueta>
+                <Precio>3000</Precio>
+                <PrecioEnCombo>2000</PrecioEnCombo>
+            </Item>
+            <Item id="0000513">
+                <Referencia>50211</Referencia>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Descripcion>Malteada Frutos Rojos D</Descripcion>
+                <Etiqueta>Malteada FrutosRojos</Etiqueta>
+                <Precio>6000</Precio>
+                <PrecioEnCombo>5500</PrecioEnCombo>
+            </Item>
+        </Familia>
+
+        <Familia id="Modif Hamburguesa">
+            <Item id="0000585">
+                <Referencia>50288</Referencia>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Descripcion>Modificador Hamburguesa Partida en Dos</Descripcion>
+                <Etiqueta>Partida en Dos</Etiqueta>
+                <Precio>N/A</Precio>
+                <PrecioEnCombo>N/A</PrecioEnCombo>
+            </Item>
+            <Item id="0000586">
+                <Referencia>50289</Referencia>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Descripcion>Modificador Hamburguesa Bien Asada</Descripcion>
+                <Etiqueta>Bien Asada</Etiqueta>
+                <Precio>N/A</Precio>
+                <PrecioEnCombo>N/A</PrecioEnCombo>
+            </Item>
+            <Item id="0000587">
+                <Referencia>50290</Referencia>
+                <UnidadDeMedida>UND</UnidadDeMedida>
+                <Descripcion>Modificador Hamburguesa Poco Asada</Descripcion>
+                <Etiqueta>Poco Asada</Etiqueta>
+                <Precio>N/A</Precio>
+                <PrecioEnCombo>N/A</PrecioEnCombo>
+            </Item>
+        </Familia>
+
+    </FamiliasAuxiliares>
+</Menu>
