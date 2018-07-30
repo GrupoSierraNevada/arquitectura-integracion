@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Menu>
     <FechaVigenciaPrecios>2018-07-27</FechaVigenciaPrecios>
     <GrupoDeFamilias id="Call-Center">
@@ -218,6 +219,7 @@
                 <UnidadDeMedida>UND</UnidadDeMedida>
                 <Precio>N/A</Precio>
                 <PrecioEnCombo>N/A</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
             <Item id="0000063">
                 <Referencia>00058</Referencia>
@@ -225,6 +227,7 @@
                 <UnidadDeMedida>UND</UnidadDeMedida>
                 <Precio>N/A</Precio>
                 <PrecioEnCombo>N/A</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
             <Item id="0000120">
                 <Referencia>00115</Referencia>
@@ -232,6 +235,7 @@
                 <UnidadDeMedida>UND</UnidadDeMedida>
                 <Precio>N/A</Precio>
                 <PrecioEnCombo>N/A</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
         </Familia>
 
@@ -243,6 +247,7 @@
                 <UnidadDeMedida>UND</UnidadDeMedida>
                 <Precio>3200</Precio>
                 <PrecioEnCombo>2500</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
         </Familia>
 
@@ -254,6 +259,7 @@
                 <UnidadDeMedida>UND</UnidadDeMedida>
                 <Precio>3000</Precio>
                 <PrecioEnCombo>2000</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
             <Item id="0000010">
                 <Referencia>00005</Referencia>
@@ -262,6 +268,7 @@
                 <Etiqueta>Agua Normal 600 mL</Etiqueta>
                 <Precio>3000</Precio>
                 <PrecioEnCombo>2000</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
             <Item id="0000513">
                 <Referencia>50211</Referencia>
@@ -270,6 +277,7 @@
                 <Etiqueta>Malteada FrutosRojos</Etiqueta>
                 <Precio>6000</Precio>
                 <PrecioEnCombo>5500</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
         </Familia>
 
@@ -281,6 +289,7 @@
                 <Etiqueta>Partida en Dos</Etiqueta>
                 <Precio>N/A</Precio>
                 <PrecioEnCombo>N/A</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
             <Item id="0000586">
                 <Referencia>50289</Referencia>
@@ -289,6 +298,7 @@
                 <Etiqueta>Bien Asada</Etiqueta>
                 <Precio>N/A</Precio>
                 <PrecioEnCombo>N/A</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
             <Item id="0000587">
                 <Referencia>50290</Referencia>
@@ -297,6 +307,7 @@
                 <Etiqueta>Poco Asada</Etiqueta>
                 <Precio>N/A</Precio>
                 <PrecioEnCombo>N/A</PrecioEnCombo>
+                <TipoDeItem>normal</TipoDeItem>
             </Item>
         </Familia>
 
